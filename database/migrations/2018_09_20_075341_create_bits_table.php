@@ -15,6 +15,8 @@ class CreateBitsTable extends Migration
     {
         Schema::create('bits', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->text('snippet');
             $table->timestamps();
         });
     }
