@@ -8,6 +8,11 @@ use Folklore\GraphQL\Support\Type as GraphQLType;
 
 class UserType extends GraphQLType
 {
+    protected $attributes = [
+        'name' => 'User',
+        'description' => 'A user'
+    ];
+    
     public function fields()
     {
         return [
